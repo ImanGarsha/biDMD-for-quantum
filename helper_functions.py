@@ -179,6 +179,8 @@ def make_control_library(u_hat, order):
     # 3. Combine the coefficients and the multinomial exponents
     result = []
     for row in u_multinomials:
-        u_row = np.product(u_list.real**row)
+        u_row = np.prod(u_list.real**row)
         result.append([u_row])
     return np.vstack(result)
+
+
